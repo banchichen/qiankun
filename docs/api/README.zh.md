@@ -163,6 +163,8 @@ toc: menu
 
     - getTemplate - `(tpl: string) => string` - 可选。
 
+    - execScriptsHooks - `ExecScriptsHooks` - 可选，在html entry模式下，可hook [import-html-entry](https://github.com/kuitos/import-html-entry)库执行html里js的过程
+
     - excludeAssetFilter - `(assetUrl: string) => boolean` - 可选，指定部分特殊的动态加载的微应用资源（css/js) 不被 qiankun 劫持处理。
 
 - 用法
@@ -266,6 +268,8 @@ toc: menu
     - getPublicPath - `(entry: Entry) => string` - 可选，参数是微应用的 entry 值。
 
     - getTemplate - `(tpl: string) => string` - 可选
+
+    - execScriptsHooks - `ExecScriptsHooks` - 可选，在html entry模式下，可hook [import-html-entry](https://github.com/kuitos/import-html-entry)库执行html里js的过程
 
     - excludeAssetFilter - `(assetUrl: string) => boolean` - 可选，指定部分特殊的动态加载的微应用资源（css/js) 不被 qiankun 劫持处理
 

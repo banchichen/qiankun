@@ -159,6 +159,8 @@ By linking the micro-application to some url rules, the function of automaticall
 
     - getTemplate - `(tpl: string) => string` - optional
 
+    - execScriptsHooks - `ExecScriptsHooks` - optional, when use qiankun's HTML entry, you can hook the process of [import-html-entry](https://github.com/kuitos/import-html-entry) execute the js in html
+
     - excludeAssetFilter - `(assetUrl: string) => boolean` - optional，some special dynamic loaded micro app resources should not be handled by qiankun hijacking
 
 - Usage
@@ -258,6 +260,8 @@ A criterion for judging whether the business is closely related: <strong>Look at
     - getPublicPath - `(url: string) => string` - Optional，The parameter is the entry value of the micro application.
 
     - getTemplate - `(tpl: string) => string` - Optional
+
+    - execScriptsHooks - `ExecScriptsHooks` - optional, when use qiankun's HTML entry, you can hook the process of [import-html-entry](https://github.com/kuitos/import-html-entry) execute the js in html
 
     - excludeAssetFilter - `(assetUrl: string) => boolean` - optional，some special dynamic loaded micro app resources should not be handled by qiankun hijacking
 

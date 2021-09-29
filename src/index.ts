@@ -10,3 +10,4 @@ export * from './errorHandler';
 export * from './effects';
 export * from './interfaces';
 export { prefetchImmediately as prefetchApps } from './prefetch';
+export type { ExecScriptsHooks } from 'import-html-entry';

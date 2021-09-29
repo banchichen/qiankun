@@ -257,6 +257,7 @@ export async function loadApp<T extends ObjectType>(
   const {
     singular = false,
     sandbox = true,
+    execScriptsHooks,
     excludeAssetFilter,
     globalContext = window,
     ...importEntryOpts
@@ -333,7 +334,7 @@ export async function loadApp<T extends ObjectType>(
   await execHooksChain(toArray(beforeLoad), app, global);
 
   // get the lifecycle hooks from module exports
-  const scriptExports: any = await execScripts(global, sandbox && !useLooseSandbox);
+  const scriptExports: any = await execScripts(global, sandbox && !useLooseSandbox, execScriptsHooks);
   const { bootstrap, mount, unmount, update } = getLifecyclesFromExports(
     scriptExports,
     appName,

@@ -2,7 +2,7 @@
  * @author kuitos
  * @since 2019-05-16
  */
-import type { ImportEntryOpts } from 'import-html-entry';
+import type { ImportEntryOpts, ExecScriptsHooks } from 'import-html-entry';
 import type { RegisterApplicationConfig, StartOpts, Parcel } from 'single-spa';
 
 declare global {
@@ -86,6 +86,7 @@ type QiankunSpecialOpts = {
    * skip some scripts or links intercept, like JSONP
    */
   excludeAssetFilter?: (url: string) => boolean;
+  execScriptsHooks?: ExecScriptsHooks;
 
   globalContext?: typeof window;
 };
